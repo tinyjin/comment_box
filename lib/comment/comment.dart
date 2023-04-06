@@ -6,7 +6,7 @@ class CommentBox extends StatelessWidget {
   dynamic formKey;
   dynamic sendButtonMethod;
   dynamic commentController;
-  ImageProvider? userImage;
+  Widget? userImage;
   String? labelText;
   String? errorText;
   Widget? sendWidget;
@@ -47,7 +47,7 @@ class CommentBox extends StatelessWidget {
             decoration: new BoxDecoration(
                 color: Colors.blue,
                 borderRadius: new BorderRadius.all(Radius.circular(50))),
-            child: CircleAvatar(radius: 50, backgroundImage: userImage),
+            child: userImage,
           ),
           title: Form(
             key: formKey,
